@@ -1,0 +1,7 @@
+<app-candidate-form
+  *ngIf="model"
+  [heading]="'Edit Candidate'"
+  [model]="candidateModel"
+  (onSaveChanges)="onSaveChanges($event)"
+>
+</app-candidate-form>

@@ -1,0 +1,171 @@
+<mat-divider></mat-divider>
+
+<mat-card>
+  <div class="content" role="main">
+    <div style="width: 70%; margin-top: 50px">
+      <form
+        name="bulkUploadForm"
+        id="bulkUploadForm"
+        #bulkUploadForm="ngForm"
+        (ngSubmit)="onSubmitBulkUpload(bulkUploadForm)"
+      >
+        <div>
+          <div class="row">
+            <div class="col-md-6">
+              <div
+                class="fileUpload mat-raised-button"
+                color="primary"
+                style="padding: 10px 15px"
+              >
+                <span style="color: #3f51b5"
+                  ><strong> Select File To Upload</strong></span
+                >
+                <input
+                  name="txtFile"
+                  #fileToUpload="ngModel"
+                  [(ngModel)]="_fileToUpload"
+                  required=""
+                  id="txtFile"
+                  type="file"
+                  accept=".xlsx,.xls,.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                  class="upload"
+                  (change)="onFileUploadControlChanged($event)"
+                />
+              </div>
+            </div>
+            <div class="col-md-6" style="display: flex; align-items: center">
+              <button
+                type="button"
+                *ngIf="_selectedFileToUpload && _selectedFileToUpload.name"
+                mat-button
+                color="primary"
+                (click)="onPreviewSelectedFile()"
+              >
+                Preview <i class="ti ti-fullscreen"></i>
+              </button>
+              <button
+                type="submit"
+                *ngIf="_selectedFileToUpload && _selectedFileToUpload.name"
+                mat-button
+                color="primary"
+              >
+                Upload
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="filePreviewModal">
+    <ng-template #filePreviewModalTemplate>
+      <div>
+        <h2 mat-dialog-title color="primary">
+          <i class="ti ti-new-window"></i> &nbsp;
+          <span> Preview Upload Details</span>
+        </h2>
+        <mat-dialog-content>
+          <div>
+            <div class="table-responsive">
+              <table class="table table-responsive table-bordered">
+                <tbody>
+                  <tr *ngFor="let row of _uploadedFileData; let index = index">
+                    <td *ngFor="let col of row">{{ col }}</td>
+                  </tr>
+                </tbody>
+                <tfoot></tfoot>
+              </table>
+            </div>
+          </div>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+          <button
+            type="button"
+            mat-stroked-button
+            color="warn"
+            style="margin-left: 15px"
+            [disabled]="ownLoaderIsActive"
+            (click)="filePreviewModal?.close()"
+          >
+            <i class="ti ti-close"></i> Close
+          </button>
+          <div style="margin-left: auto">
+            {{ _uploadedFileData.length | number }}
+          </div>
+        </mat-dialog-actions>
+      </div>
+    </ng-template>
+  </div>
+
+  <div class="invalidfilePreviewModal">
+    <ng-template #invalidfilePreviewModalTemplate>
+      <div>
+        <h2 mat-dialog-title color="primary">
+          <i class="ti ti-new-window"></i> &nbsp;
+          <span> The following candidates have invalid or missing entries</span>
+        </h2>
+        <mat-dialog-content>
+          <div>
+            <div class="table-responsive">
+              <table class="table table-responsive table-bordered">
+                <thead>
+                  <tr>
+                    <th>Identity</th>
+                    <th>FirstName</th>
+                    <th>Surname</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Mobile</th>
+                    <th>Active</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    *ngFor="
+                      let candidate of invalidCandidates;
+                      let index = index
+                    "
+                  >
+                    <td>{{ candidate.identity }}</td>
+                    <td>{{ candidate.firstName }}</td>
+                    <td>{{ candidate.surname }}</td>
+                    <td>{{ candidate.age }}</td>
+                    <td>{{ candidate.sex }}</td>
+                    <td>{{ candidate.mobile }}</td>
+                    <td>{{ candidate.active }}</td>
+                  </tr>
+                </tbody>
+                <tfoot></tfoot>
+              </table>
+            </div>
+          </div>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+          <button
+            type="button"
+            mat-stroked-button
+            color="warn"
+            [disabled]="ownLoaderIsActive"
+            (click)="filePreviewModal?.close()"
+          >
+            <i class="ti ti-close"></i> Close and correct errors
+          </button>
+          <button
+            type="button"
+            mat-stroked-button
+            color="primary"
+            style="margin-left: 15px"
+            [disabled]="ownLoaderIsActive"
+            (click)="uploadValidCandidates()"
+          >
+            <i class="ti ti-close"></i> Continue to upload valid candidates Only
+          </button>
+          <div style="margin-left: auto">
+            {{ _uploadedFileData.length | number }}
+          </div>
+        </mat-dialog-actions>
+      </div>
+    </ng-template>
+  </div>
+</mat-card>

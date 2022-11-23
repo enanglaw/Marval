@@ -1,0 +1,138 @@
+table {
+  width: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  margin:5px 10px 5px 1px;
+}
+tr {
+  height: 30px;
+}
+th {
+  width: 15%;
+  text-align: right;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  // padding: 5px;
+}
+td {
+  width: 15%;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-left: 25px;
+}
+
+.btnFooter {
+  width: 150px;
+}
+
+.mediaDiv {
+  display: flex;
+}
+
+.mediaLabel {
+  width: 45%;
+  max-width: 100%;
+  margin: 0 0 1rem 0;
+  display: inline-block;
+  vertical-align: middle;
+  align-content: flex-start;
+  align-items: flex-start;
+  border: solid 1px #ccc;
+  min-height: 36px;
+  background: white;
+  border-radius: 4px;
+  line-height: 36px;
+  padding-left: 1rem;
+}
+:host {
+  height: 10%;
+}
+
+.toolbar-user-container {
+  height: 90%;
+  position: relative;
+
+  .toolbar-user-btn {
+    display: flex;
+    justify-content: center;
+    height: 60%;
+    min-width: 160px;
+  }
+  
+  table {
+  table-layout: fixed;
+  width: 100%;
+  display: table;
+    }
+    
+    a {
+      margin-right: 1em;
+    }
+
+    table.mat-table {
+      margin-bottom: 20px;
+  }
+    .toolbar-list-btn {
+      display: flex;
+      justify-content: center;
+
+  
+
+    .name {
+      margin: 7px 8px 7px 10px;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+      transform: rotate(0);
+      transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    &.open {
+      background: rgba(0, 0, 0, 0.05);
+
+      .icon {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  .shadow-4 {
+      box-shadow: 0 1px 10px #0000001f,0 4px 5px #00000024,0 2px 4px -1px #0003 !important;
+      margin: 5px;
+      padding: 5px;
+      border: radius 5%;
+    }
+  .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  .profile-image{
+      border: 1px solid black;
+      min-height: 15%;
+      min-width: 15%;
+      max-height: 15%;
+      max-width: 15%;
+  
+  }
+  .dropdown {
+    background: rgb(251, 249, 249);
+    z-index: 2;
+    position:absolute;
+    width: 92%;
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s linear, max-height 0.25s linear, opacity 0.25s linear;
+
+    @media screen and (max-width: 599px) {
+      min-width: 65px;
+    }
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

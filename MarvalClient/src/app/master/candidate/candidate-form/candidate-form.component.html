@@ -1,0 +1,167 @@
+<div
+  *ngIf="isFormLoded"
+  fxLayout="column"
+  fxLayoutAlign="space-between stretch"
+  fxFlexFil
+  fxFill
+  class="components-container-gt-xs"
+>
+  <form
+    (submit)="saveChanges()"
+    (keydown.enter)="$event.preventDefault()"
+    [formGroup]="form"
+    fxLayout="row"
+    fxLayoutAlign="space-between stretch"
+    fxFlexFil
+    fxFill
+    fxLayoutGap="20px"
+  >
+    <div
+      fxFlex="100"
+      fxLayoutGap="10px"
+      fxLayout="column"
+      class="mat-elevation-z2 contact-add"
+    >
+      <div fxFlex="10" fxLayout="row" fxLayoutAlign="space-between center">
+        <h3 class="mat-headline">{{ heading }}</h3>
+        <div fxLayout="row" fxLayoutAlign="end center" fxFlex="10">
+          <button type="button" mat-icon-button (click)="onCancel()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <div
+        fxFlex
+        fxLayoutGap="10px"
+        fxLayout="row"
+        fxLayout.lt-lg="column"
+        fxLayoutAlign="start start"
+      >
+        <mat-form-field fxFlex="50" appearance="outline">
+          <mat-label>FirstName </mat-label>
+          <input
+            matInput
+            placeholder=" First Name"
+            formControlName="firstName"
+          />
+          <mat-error
+            *ngIf="
+              f.firstName.invalid &&
+              (f.firstName.touched || f.firstName.dirty) &&
+              f.firstName.hasError('required')
+            "
+          >
+            FirstName is required.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field fxFlex="50" appearance="outline">
+          <mat-label>Surname </mat-label>
+          <input matInput placeholder="Surname" formControlName="surname" />
+          <mat-error
+            *ngIf="
+              f.surname.invalid &&
+              (f.surname.touched || f.surname.dirty) &&
+              f.surname.hasError('required')
+            "
+          >
+            Surname is required.</mat-error
+          >
+        </mat-form-field>
+      </div>
+      <div
+        fxFlex
+        fxLayoutGap="10px"
+        fxLayout="row"
+        fxLayout.lt-lg="column"
+        fxLayoutAlign="start start"
+      >
+        <mat-form-field fxFlex="50" appearance="outline">
+          <mat-label>Sex </mat-label>
+          <input matInput placeholder=" Sex" formControlName="sex" />
+          <mat-error
+            *ngIf="
+              f.sex.invalid &&
+              (f.sex.touched || f.sex.dirty) &&
+              f.sex.hasError('required')
+            "
+          >
+            Sex is required.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field fxFlex="50" appearance="outline">
+          <mat-label>Age </mat-label>
+          <input matInput placeholder="Age" formControlName="age" />
+          <mat-error
+            *ngIf="
+              f.age.invalid &&
+              (f.age.touched || f.age.dirty) &&
+              f.age.hasError('required')
+            "
+          >
+            Age is required.</mat-error
+          >
+        </mat-form-field>
+      </div>
+      <div
+        fxFlex
+        fxLayoutGap="10px"
+        fxLayout="row"
+        fxLayout.lt-lg="column"
+        fxLayoutAlign="start start"
+      >
+        <mat-form-field fxFlex="65" appearance="outline">
+          <mat-label>Mobile </mat-label>
+          <input matInput placeholder=" Mobile" formControlName="mobile" />
+          <mat-error
+            *ngIf="
+              f.mobile.invalid &&
+              (f.mobile.touched || f.mobile.dirty) &&
+              f.mobile.hasError('required')
+            "
+          >
+            Mobile Number is required.</mat-error
+          >
+        </mat-form-field>
+
+        <mat-label>IsActive </mat-label>
+        <mat-radio-group formControlName="active">
+          <mat-radio-button value="true" [checked]="f.active.value === 'true'"
+            >True</mat-radio-button
+          >
+        </mat-radio-group>
+
+        <mat-radio-group formControlName="active">
+          <mat-radio-button value="false" [checked]="f.active.value === 'false'"
+            >False</mat-radio-button
+          >
+        </mat-radio-group>
+      </div>
+
+      <mat-divider></mat-divider>
+      <div
+        fxFlex
+        class="contact-save"
+        fxLayout="row"
+        fxLayoutAlign="end stretch"
+      >
+        <div fxFlex="50" fxLayout="row" fxLayoutAlign="">
+          <button color="primary" mat-raised-button [disabled]="!form.valid">
+            SAVE
+          </button>
+          <button type="button" (click)="onCancel()" mat-raised-button>
+            CANCEL
+          </button>
+        </div>
+        <div fxFlex="50" fxLayout="row" fxLayoutAlign=""></div>
+      </div>
+      <div
+        fxFlex
+        fxLayoutGap="10px"
+        fxLayout="row"
+        fxLayout.lt-lg="column"
+        fxLayoutAlign="start start"
+      ></div>
+    </div>
+  </form>
+</div>

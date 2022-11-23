@@ -1,0 +1,239 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.WEB\\MARVAL.WEB.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.DAL\\MARVAL.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.DAL\\MARVAL.DAL.csproj",
+        "projectName": "MARVAL.DAL",
+        "projectPath": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.DAL\\MARVAL.DAL.csproj",
+        "packagesPath": "C:\\Users\\lawrence.enang\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lawrence.enang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.Domain\\MARVAL.Domain.csproj": {
+                "projectPath": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.Domain\\MARVAL.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.Domain\\MARVAL.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.Domain\\MARVAL.Domain.csproj",
+        "projectName": "MARVAL.Domain",
+        "projectPath": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.Domain\\MARVAL.Domain.csproj",
+        "packagesPath": "C:\\Users\\lawrence.enang\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lawrence.enang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.WEB\\MARVAL.WEB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.WEB\\MARVAL.WEB.csproj",
+        "projectName": "MARVAL.WEB",
+        "projectPath": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.WEB\\MARVAL.WEB.csproj",
+        "packagesPath": "C:\\Users\\lawrence.enang\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.WEB\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lawrence.enang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.DAL\\MARVAL.DAL.csproj": {
+                "projectPath": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.DAL\\MARVAL.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Grpc.Core": {
+              "target": "Package",
+              "version": "[2.46.5, )"
+            },
+            "LinqToExcel": {
+              "target": "Package",
+              "version": "[2.0.0-PRERELEASE-2, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Remotion.Linq": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "System.Data.OleDb": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

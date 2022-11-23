@@ -1,0 +1,54 @@
+<div
+  id="candidateDetailControl"
+  #candidateDetailControl
+  fxLayout="column"
+  fxLayoutAlign="space-between stretch"
+  fxFlexFil
+  fxFill
+  class="components-container-gt-xs"
+>
+  <div
+    fxFlex="100"
+    fxLayoutGap="10px"
+    fxLayout="column"
+    class="mat-elevation-z2 contact-add"
+  >
+    <div fxFlex="10" fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxLayout="row" fxLayoutAlign="end center" fxFlex="10">
+        <button type="button" mat-icon-button (click)="onCancel()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div
+      *ngIf="candidateData"
+      fxFlex
+      fxLayoutGap="10px"
+      fxLayout="row"
+      fxLayoutAlign="start start"
+    >
+      <table class="mat-elevation-z2 table-index">
+        <tr>
+          <th>First Name</th>
+          <td>{{ candidateData.firstName }}</td>
+          <th>Surname</th>
+          <td>{{ candidateData.surname }}</td>
+          <th>Gender</th>
+          <td>{{ candidateData.sex }}</td>
+        </tr>
+        <tr>
+          <th>Age</th>
+          <td>{{ candidateData.age }}</td>
+          <th>Status</th>
+          <td>{{ candidateData.active }}</td>
+          <th>Mobile Number</th>
+          <td>{{ candidateData.mobile }}</td>
+        </tr>
+      </table>
+
+      <mat-divider></mat-divider>
+      <br />
+    </div>
+  </div>
+</div>

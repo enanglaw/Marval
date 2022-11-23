@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "7E1um3Mtp3U7uSPn0hgcW9ZVC/is8wsgaXlEFAkwuEE=",
+  "Source": "MARVAL.WEB",
+  "BasePath": "_content/MARVAL.WEB",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MARVAL.WEB\\wwwroot",
+      "Source": "MARVAL.WEB",
+      "ContentRoot": "C:\\Projects\\POC\\MARVAL_POC\\MARVAL\\MarvalApi\\MARVAL.WEB\\wwwroot\\",
+      "BasePath": "_content/MARVAL.WEB",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
